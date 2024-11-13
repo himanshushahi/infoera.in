@@ -1,0 +1,1 @@
+const r=async(s,o)=>{const e=new FormData;e.append("file",s,s.name),e.append("fileType",o);try{const a=await fetch("https://dashboard.infoera.in/api/upload",{method:"POST",body:e}),{fileId:t,success:n,message:c}=await a.json();return{success:n,fileId:t,message:c}}catch(a){return console.log(a),{success:!1}}};export{r as u};
